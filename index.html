@@ -88,6 +88,9 @@
       }
     }
   </style>
+
+  <script src="env.js"></script>
+  
 </head>
 <body>
   <form class="container" id="blueskyForm" autocomplete="off">
@@ -104,12 +107,6 @@
     <div class="error" id="errorMsg">Please fill in both fields correctly.</div>
     <div class="summary-box" id="summaryBox"></div>
   </form>
-
-  <script>
-    window.BASE_URL = "{{ BACKEND_URL }}"; 
-  </script>
-
-
   <script>
     const form = document.getElementById('blueskyForm');
     const successMsg = document.getElementById('successMsg');

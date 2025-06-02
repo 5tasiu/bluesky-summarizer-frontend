@@ -132,7 +132,9 @@
 
       // Encode the search string for URL
       const encodedSearch = encodeURIComponent(search);
-      const url = `http://127.0.0.1:5000/summary/${encodedSearch}`;
+      const BASE_URL = process.env.BACKEND_URL || 'http://127.0.0.1:5000';
+
+      const url = `${BASE_URL}/summary/${encodedSearch}`;
 
       fetch(url)
         .then(response => {
